@@ -1,0 +1,23 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: springCloud-provier-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://192.168.137.1:3306/spring_cloud_01?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: mysql
+
+# mybatis
+mybatis:
+  # config-location: classpath:mybatis/mybatis-config.xml
+  configuration:
+    cache-enabled: true
+    map-underscore-to-camel-case: true
+    # 输出 mybatis SQL 语句，调试时打开，上线关闭
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: org.zjh.pojo
