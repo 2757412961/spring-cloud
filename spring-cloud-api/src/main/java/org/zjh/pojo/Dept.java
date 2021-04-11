@@ -24,6 +24,12 @@ public class Dept implements Serializable {
 
     private String deptName;
 
+    /**
+     * 这个数据数存在哪个数据库的字段~微服务，一个服务对应一个数据库，同一个信息可能存在不同的数据库
+     */
     private String dbSource;
 
+    public Dept(String deptName) {
+        this.deptName = deptName;
+    }
 }
