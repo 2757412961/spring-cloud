@@ -32,8 +32,8 @@ public class DeptServiceImpl implements DeptService {
     }
 
     @Override
-    public Dept queryById(Long dept_id) {
-        return deptMapper.queryById(dept_id);
+    public Dept queryById(Long deptId) {
+        return deptMapper.queryById(deptId);
     }
 
 }

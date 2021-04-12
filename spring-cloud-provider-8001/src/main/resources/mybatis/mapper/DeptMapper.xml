@@ -13,7 +13,7 @@
 
     <insert id="addDept" flushCache="true">
         INSERT INTO spring_cloud_01.dept(dept_name, db_source)
-            VALUE (#{dept_name}, DATABASE())
+            VALUE (#{deptName}, DATABASE())
     </insert>
 
     <select id="queryAll" resultType="org.zjh.pojo.Dept">
@@ -26,7 +26,7 @@
         SELECT
         <include refid="columns"/>
         FROM spring_cloud_01.dept
-        WHERE dept_id = #{dept_id}
+        WHERE dept_id = #{deptId}
         LIMIT 1
     </select>
 

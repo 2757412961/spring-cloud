@@ -22,6 +22,6 @@ public interface DeptMapper {
 
     List<Dept> queryAll();
 
-    Dept queryById(@Param(value = "dept_id") Long dept_id);
+    Dept queryById(@Param(value = "deptId") Long deptId);
 
 }

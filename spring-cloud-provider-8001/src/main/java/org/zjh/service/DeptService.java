@@ -17,6 +17,6 @@ public interface DeptService {
 
     List<Dept> queryAll();
 
-    Dept queryById(Long dept_id);
+    Dept queryById(Long deptId);
 
 }
