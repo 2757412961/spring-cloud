@@ -21,3 +21,6 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:mybatis/mapper/*.xml
   type-aliases-package: org.zjh.pojo
+
+#eureka
+eureka
