@@ -22,9 +22,6 @@ public class ServiceMessageController {
     private DiscoveryClient discoveryClient;
 
     /**
-     * 注册进来的微服务，获取一些消息~
-     */
-    /**
      * @Description: 获取微服务列表的清单
      * @param: []
      * @return: java.lang.Object
@@ -41,7 +38,7 @@ public class ServiceMessageController {
 
         for (ServiceInstance instance : instances) {
             System.out.println(
-                    "实例信息：\t" +
+                    "服务实例信息：\t" +
                             instance.getHost() + "\t" +
                             instance.getPort() + "\t" +
                             instance.getUri() + "\t" +
