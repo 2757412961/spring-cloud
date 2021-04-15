@@ -25,7 +25,7 @@
         <eureka.version>1.4.6.RELEASE</eureka.version>
         <mybatis.version>5.1.47</mybatis.version>
         <druid.version>1.1.10</druid.version>
-        <lombok.version>1.16.10</lombok.version>
+        <lombok.version>1.18.10</lombok.version>
         <junit.version>4.12</junit.version>
         <gson.version>2.6.2</gson.version>
 
