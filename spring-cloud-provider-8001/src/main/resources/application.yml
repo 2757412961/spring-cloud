@@ -23,14 +23,15 @@ mybatis:
   type-aliases-package: org.zjh.pojo
 
 # eureka
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://192.168.137.116:7001/eureka/
-#  instance:
-#    instance-id: spring-cloud-provider-dept8001 # 修改eureka上的默认描述信息!
-#
-#info:
-#  app.name: zjh spring cloud server provider
-#  company.name: org.zjh
-#  hello: qaq
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.137.116:7001/eureka/
+  instance:
+    instance-id: spring-cloud-provider-dept8001 # 修改eureka上的默认描述信息!
+
+# 完善监控信息
+info:
+  app.name: zjh spring cloud server provider
+  company.name: org.zjh
+  hello: qaq
