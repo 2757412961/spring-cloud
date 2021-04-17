@@ -35,3 +35,5 @@ info:
   app.name: zjh spring cloud server provider
   company.name: org.zjh
   hello: qaq
+  host: springCloud-provier-dept
+  port: 8002
