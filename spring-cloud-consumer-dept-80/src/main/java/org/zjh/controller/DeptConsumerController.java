@@ -23,7 +23,8 @@ public class DeptConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String REST_URL_FREIX = "http://localhost:8001";
+    /** ribbon 和只用IP访问，只能选择其中的一种方式 */
+    private static final String REST_URL_PREFIX = "http://192.168.2.116:8001";
 
     /**
      * 理解:消费者，不应该有service层
@@ -32,17 +33,17 @@ public class DeptConsumerController {
      */
     @RequestMapping("/dept/get/{id}")
     public Dept get(@PathVariable("id") Long id) {
-        return restTemplate.getForObject(REST_URL_FREIX + "/dept/get/" + id, Dept.class);
+        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/get/" + id, Dept.class);
     }
 
     @RequestMapping("/dept/get/all")
     public List<?> getAll() {
-        return restTemplate.getForObject(REST_URL_FREIX + "/dept/get/all", List.class);
+        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/get/all", List.class);
     }
 
     @RequestMapping("/dept/add")
     public Boolean add(Dept dept) {
-        return restTemplate.postForObject(REST_URL_FREIX + "/dept/add", dept, Boolean.class);
+        return restTemplate.postForObject(REST_URL_PREFIX + "/dept/add", dept, Boolean.class);
     }
 
 

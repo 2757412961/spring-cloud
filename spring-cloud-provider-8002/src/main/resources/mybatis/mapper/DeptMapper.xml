@@ -1,0 +1,33 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zjh.dao.DeptMapper">
+    <cache/>
+
+    <sql id="columns">
+        <if test="true">
+            dept_id, dept_name, db_source
+        </if>
+    </sql>
+
+    <insert id="addDept" flushCache="true">
+        INSERT INTO spring_cloud_01.dept(dept_name, db_source)
+            VALUE (#{deptName}, DATABASE())
+    </insert>
+
+    <select id="queryAll" resultType="org.zjh.pojo.Dept">
+        SELECT
+        <include refid="columns"/>
+        FROM spring_cloud_01.dept
+    </select>
+
+    <select id="queryById" resultType="org.zjh.pojo.Dept" parameterType="Long">
+        SELECT
+        <include refid="columns"/>
+        FROM spring_cloud_01.dept
+        WHERE dept_id = #{deptId}
+        LIMIT 1
+    </select>
+
+</mapper>
