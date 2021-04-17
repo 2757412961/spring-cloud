@@ -7,7 +7,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://192.168.137.1:3306/spring_cloud_01?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://192.168.2.1:3306/spring_cloud_01?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: mysql
 
@@ -26,7 +26,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.137.116:7001/eureka/
+      defaultZone: http://192.168.2.116:7001/eureka/, http://192.168.2.116:7002/eureka/, http://192.168.2.116:7003/eureka/
   instance:
     instance-id: spring-cloud-provider-dept8001 # 修改eureka上的默认描述信息!
 

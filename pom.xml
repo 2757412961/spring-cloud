@@ -12,6 +12,8 @@
         <module>spring-cloud-provider-8001</module>
         <module>spring-cloud-consumer-dept-80</module>
         <module>spring-cloud-eureka-7001</module>
+        <module>spring-cloud-eureka-7002</module>
+        <module>spring-cloud-eureka-7003</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -23,6 +25,7 @@
         <springCloud.version>Greenwich.SR1</springCloud.version>
         <springBoot.version>2.1.4.RELEASE</springBoot.version>
         <eureka.version>1.4.6.RELEASE</eureka.version>
+        <ribbon.version>1.4.6.RELEASE</ribbon.version>
         <mybatis.version>5.1.47</mybatis.version>
         <druid.version>1.1.10</druid.version>
         <lombok.version>1.18.10</lombok.version>
@@ -50,18 +53,24 @@
                 <artifactId>spring-cloud-starter-eureka</artifactId>
                 <version>${eureka.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
                 <version>${eureka.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
                 <version>${eureka.version}</version>
             </dependency>
+
+            <!-- Ribbon -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+                <version>${ribbon.version}</version>
+            </dependency>
+
 
             <!-- Spring boot -->
             <dependency>
