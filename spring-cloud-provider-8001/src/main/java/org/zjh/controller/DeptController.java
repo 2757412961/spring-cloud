@@ -3,7 +3,7 @@ package org.zjh.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.zjh.pojo.Dept;
-import org.zjh.service.DeptService;
+import org.zjh.serviceFeign.DeptService;
 
 import java.util.List;
 
