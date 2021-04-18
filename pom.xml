@@ -28,6 +28,7 @@
         <springBoot.version>2.1.4.RELEASE</springBoot.version>
         <eureka.version>1.4.6.RELEASE</eureka.version>
         <ribbon.version>1.4.6.RELEASE</ribbon.version>
+        <feign.version>1.4.6.RELEASE</feign.version>
         <mybatis.version>5.1.47</mybatis.version>
         <druid.version>1.1.10</druid.version>
         <lombok.version>1.18.10</lombok.version>
@@ -73,6 +74,12 @@
                 <version>${ribbon.version}</version>
             </dependency>
 
+            <!-- feign -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-feign</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
 
             <!-- Spring boot -->
             <dependency>

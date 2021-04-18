@@ -13,6 +13,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
  * @update:
  */
 
+/** 实现自定义的负载均衡规则 */
 @RibbonClient(name = "SPRINGCLOUD-PROVIER-DEPT", configuration = {RuleConf.class})
 @EnableEurekaClient
 @SpringBootApplication
