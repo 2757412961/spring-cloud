@@ -16,8 +16,8 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 @RibbonClient(name = "SPRINGCLOUD-PROVIER-DEPT", configuration = {RuleConf.class})
 @EnableEurekaClient
 @SpringBootApplication
-public class DeptConsumer80 {
+public class FeignDeptConsumer80 {
     public static void main(String[] args) {
-        SpringApplication.run(DeptConsumer80.class);
+        SpringApplication.run(FeignDeptConsumer80.class);
     }
 }
