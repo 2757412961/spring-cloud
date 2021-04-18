@@ -1,8 +1,8 @@
 package org.zjh.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.zjh.pojo.Dept;
 import org.zjh.serviceFeign.DeptClientService;
 
 import java.util.List;
@@ -24,9 +24,19 @@ public class FeignController {
     @Autowired
     private DeptClientService deptClientService = null;
 
-    @RequestMapping("/dept/get/all")
+    @GetMapping("/dept/get/all")
     public List<?> getAll() {
         return deptClientService.queryAll();
+    }
+
+    @GetMapping("/dept/get/{id}")
+    public Dept getById(@PathVariable("id") Long id){
+        return deptClientService.queryById(id);
+    }
+
+    @PostMapping("/dept/add")
+    public Boolean addDept(@RequestBody Dept dept){
+        return deptClientService.addDept(dept);
     }
 
 }

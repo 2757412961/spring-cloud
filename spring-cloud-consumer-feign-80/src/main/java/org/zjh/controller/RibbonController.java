@@ -1,6 +1,7 @@
 package org.zjh.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -30,7 +31,7 @@ public class RibbonController {
      */
     private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIER-DEPT";
 
-    @RequestMapping("/dept/get/all")
+    @GetMapping("/dept/get/all")
     public List<?> getAll() {
         return restTemplate.getForObject(REST_URL_PREFIX + "/dept/get/all", List.class);
     }

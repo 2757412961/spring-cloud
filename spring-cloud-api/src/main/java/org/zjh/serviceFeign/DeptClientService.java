@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.zjh.serviceFeign.hystrixFallback.DeptClientServiceFallbackFactory;
 import org.zjh.pojo.Dept;
 
 import java.util.List;
@@ -17,14 +18,14 @@ import java.util.List;
  */
 
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIER-DEPT")
+@FeignClient(value = "SPRINGCLOUD-PROVIER-DEPT", fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @GetMapping("/dept/get/all")
     List<Dept> queryAll();
 
     @GetMapping("/dept/get/{id}")
-    Dept querById(@PathVariable("id") Long id);
+    Dept queryById(@PathVariable("id") Long id);
 
     @PostMapping("/dept/add")
     Boolean addDept(Dept dept);

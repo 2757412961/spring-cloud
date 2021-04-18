@@ -28,7 +28,7 @@ eureka:
     service-url:
       defaultZone: http://192.168.2.116:7001/eureka/, http://192.168.2.116:7002/eureka/, http://192.168.2.116:7003/eureka/
   instance:
-    instance-id: spring-cloud-provider-dept8001 # 修改eureka上的默认描述信息!
+    instance-id: spring-cloud-provider-dept-hystrix-8001 # 修改eureka上的默认描述信息!
     prefer-ip-address: true # 显示 IP 地址
 
 # 完善监控信息
