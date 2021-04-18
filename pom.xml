@@ -14,10 +14,11 @@
         <module>spring-cloud-eureka-7003</module>
         <module>spring-cloud-provider-8001</module>
         <module>spring-cloud-provider-8002</module>
+        <module>spring-cloud-provider-hystrix-8001</module>
         <module>spring-cloud-consumer-80</module>
         <module>spring-cloud-consumer-ribbon-80</module>
         <module>spring-cloud-consumer-feign-80</module>
-        <module>spring-cloud-provider-hystrix-8001</module>
+        <module>spring-cloud-consumer-hystrix-dashborad</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -32,6 +33,7 @@
         <ribbon.version>1.4.6.RELEASE</ribbon.version>
         <feign.version>1.4.6.RELEASE</feign.version>
         <hystrix.version>1.4.6.RELEASE</hystrix.version>
+        <hystrix.dashboard.version>1.4.6.RELEASE</hystrix.dashboard.version>
         <mybatis.version>5.1.47</mybatis.version>
         <druid.version>1.1.10</druid.version>
         <lombok.version>1.18.10</lombok.version>
@@ -89,6 +91,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
                 <version>${hystrix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+                <version>${hystrix.dashboard.version}</version>
             </dependency>
 
             <!-- Spring boot -->

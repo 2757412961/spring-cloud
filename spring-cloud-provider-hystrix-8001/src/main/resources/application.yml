@@ -38,3 +38,10 @@ info:
   hello: qaq
   host: springCloud-provier-dept
   port: 8001
+
+# Hystrix dash board
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
