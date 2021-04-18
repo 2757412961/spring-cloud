@@ -50,7 +50,7 @@ public class ZjuRule extends AbstractLoadBalancerRule {
 
         Server server = null;
         int count = 0;
-        while (server == null && count++ < 10) {
+        while (count++ < 10) {
             List<Server> reachableServers = lb.getReachableServers();
             List<Server> allServers = lb.getAllServers();
             int upCount = reachableServers.size();
