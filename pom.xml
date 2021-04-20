@@ -19,6 +19,7 @@
         <module>spring-cloud-consumer-ribbon-80</module>
         <module>spring-cloud-consumer-feign-80</module>
         <module>spring-cloud-consumer-hystrix-dashborad</module>
+        <module>spring-cloud-zuul-9527</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -27,6 +28,8 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <org.zjh.api.version>1.0-SNAPSHOT</org.zjh.api.version>
+
         <springCloud.version>Greenwich.SR1</springCloud.version>
         <springBoot.version>2.1.4.RELEASE</springBoot.version>
         <eureka.version>1.4.6.RELEASE</eureka.version>
@@ -34,6 +37,7 @@
         <feign.version>1.4.6.RELEASE</feign.version>
         <hystrix.version>1.4.6.RELEASE</hystrix.version>
         <hystrix.dashboard.version>1.4.6.RELEASE</hystrix.dashboard.version>
+        <zuul.version>2.1.6.RELEASE</zuul.version>
         <mybatis.version>5.1.47</mybatis.version>
         <druid.version>1.1.10</druid.version>
         <lombok.version>1.18.10</lombok.version>
@@ -46,6 +50,13 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Module -->
+            <dependency>
+                <groupId>org.zjh</groupId>
+                <artifactId>spring-cloud-api</artifactId>
+                <version>${org.zjh.api.version}</version>
+            </dependency>
+
             <!-- spring cloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -98,6 +109,13 @@
                 <version>${hystrix.dashboard.version}</version>
             </dependency>
 
+            <!-- zuul -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+                <version>${zuul.version}</version>
+            </dependency>
+
             <!-- Spring boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -107,6 +125,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springBoot.version}</version>
+            </dependency>
+            <!-- actuator -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>${springBoot.version}</version>
             </dependency>
             <!-- springBoot 热部署工具 -->
@@ -121,8 +145,8 @@
                 <version>${springBoot.version}</version>
             </dependency>
 
+            <!-- mysql -->
             <dependency>
-                <!-- mysql -->
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mybatis.version}</version>
@@ -141,12 +165,14 @@
                 <version>${druid.version}</version>
             </dependency>
 
+            <!-- lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
 
+            <!-- junit -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>

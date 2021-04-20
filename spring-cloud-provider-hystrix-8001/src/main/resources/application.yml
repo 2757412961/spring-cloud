@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: springCloud-provier-dept
+    name: spring-cloud-provier-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
@@ -36,7 +36,7 @@ info:
   app.name: zjh spring cloud server provider
   company.name: org.zjh
   hello: qaq
-  host: springCloud-provier-dept
+  host: spring-cloud-provier-dept
   port: 8001
 
 # Hystrix dash board

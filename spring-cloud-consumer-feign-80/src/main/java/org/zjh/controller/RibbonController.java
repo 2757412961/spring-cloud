@@ -29,7 +29,7 @@ public class RibbonController {
      * Ribbon。 我们这里的地址，应该是一一个变量，通过服务名来访问
      * Ribbon 和 Eureka 整合以后，客户端可以直接调用，不用关心IP地址和端口号
      */
-    private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIER-DEPT";
+    private static final String REST_URL_PREFIX = "http://SPRING-CLOUD-PROVIER-DEPT";
 
     @GetMapping("/dept/get/all")
     public List<?> getAll() {

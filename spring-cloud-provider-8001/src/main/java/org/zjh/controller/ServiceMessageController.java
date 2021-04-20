@@ -34,7 +34,7 @@ public class ServiceMessageController {
         List<String> services = discoveryClient.getServices();
         System.out.println("invoke discovery():" + services);
 
-        List<ServiceInstance> instances = discoveryClient.getInstances("SPRINGCLOUD-PROVIER-DEPT");
+        List<ServiceInstance> instances = discoveryClient.getInstances("SPRING-CLOUD-PROVIER-DEPT");
 
         for (ServiceInstance instance : instances) {
             System.out.println(
