@@ -9,7 +9,6 @@ spring:
     config:
       server:
         git:
-          username: 2757412961
-          password: MoYan0000
-          uri: https://github.com/2757412961/spring-cloud # http
-
+          username: *
+          password: *
+          uri: * # http

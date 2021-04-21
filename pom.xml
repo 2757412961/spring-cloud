@@ -21,6 +21,10 @@
         <module>spring-cloud-consumer-hystrix-dashborad</module>
         <module>spring-cloud-zuul-9527</module>
         <module>spring-cloud-config-3344</module>
+        <module>sprign-cloud-confid-server-3355</module>
+        <module>spring-cloud-config-server-3355</module>
+        <module>spring-cloud-config-client</module>
+        <module>spring-cloud-config-client-3344</module>
     </modules>
     <packaging>pom</packaging>
 
