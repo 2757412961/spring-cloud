@@ -1,0 +1,15 @@
+server:
+  port: 3344
+
+# application
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          username: 2757412961
+          password: MoYan0000
+          uri: https://github.com/2757412961/spring-cloud # http
+

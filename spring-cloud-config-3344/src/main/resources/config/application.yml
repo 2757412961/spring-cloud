@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: springcloud-config-dev
+    
+---
+spring:
+  profiles: prod
+  application:
+    name: springcloud-config-prod
+
+---
+spring:
+  profiles: test
+  application:
+    name: springcloud-config-test

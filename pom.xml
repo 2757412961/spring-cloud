@@ -20,6 +20,7 @@
         <module>spring-cloud-consumer-feign-80</module>
         <module>spring-cloud-consumer-hystrix-dashborad</module>
         <module>spring-cloud-zuul-9527</module>
+        <module>spring-cloud-config-3344</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -38,6 +39,7 @@
         <hystrix.version>1.4.6.RELEASE</hystrix.version>
         <hystrix.dashboard.version>1.4.6.RELEASE</hystrix.dashboard.version>
         <zuul.version>2.1.6.RELEASE</zuul.version>
+        <config.version>1.4.6.RELEASE</config.version>
         <mybatis.version>5.1.47</mybatis.version>
         <druid.version>1.1.10</druid.version>
         <lombok.version>1.18.10</lombok.version>
@@ -115,6 +117,14 @@
                 <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
                 <version>${zuul.version}</version>
             </dependency>
+
+            <!-- config -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-config-server</artifactId>
+                <version>${config.version}</version>
+            </dependency>
+
 
             <!-- Spring boot -->
             <dependency>
