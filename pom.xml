@@ -21,10 +21,8 @@
         <module>spring-cloud-consumer-hystrix-dashborad</module>
         <module>spring-cloud-zuul-9527</module>
         <module>spring-cloud-config-3344</module>
-        <module>sprign-cloud-confid-server-3355</module>
-        <module>spring-cloud-config-server-3355</module>
-        <module>spring-cloud-config-client</module>
         <module>spring-cloud-config-client-3344</module>
+        <module>spring-cloud-config-server-3355</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -43,7 +41,8 @@
         <hystrix.version>1.4.6.RELEASE</hystrix.version>
         <hystrix.dashboard.version>1.4.6.RELEASE</hystrix.dashboard.version>
         <zuul.version>2.1.6.RELEASE</zuul.version>
-        <config.version>1.4.6.RELEASE</config.version>
+        <config.version>2.1.6.RELEASE</config.version>
+
         <mybatis.version>5.1.47</mybatis.version>
         <druid.version>1.1.10</druid.version>
         <lombok.version>1.18.10</lombok.version>
